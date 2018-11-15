@@ -1,5 +1,0 @@
-Name: Ward, Janie	Score: 1	Grad? false
-Name: Bush, Adrian	Score: 32	Grad? false
-Name: Ryan, Jamie	Score: 42	Grad? false
-Name: Ramirez, Melissa	Score: 25	Grad? true
-Name: Hawking, Jane	Score: 86	Grad? true
