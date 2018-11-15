@@ -1,0 +1,111 @@
+Run on boston using: for i in `seq 1 3` ; do ./sieve 100000; done; done > Data
+for i in `seq 1 8`; do export OMP_NUM_THREADS=$i; for j in `seq 1 3` ; do ./sieve2 1500000000; done; done > Data3
+
+SIEVE:
+
+100,000 results:
+There are 9592 primes less than or equal to 100000
+First three primes:2 3 5 
+Last three primes:99991 99989 99971 
+elapsed time = 5.805943 (sec)
+
+There are 9592 primes less than or equal to 100000
+First three primes:2 3 5 
+Last three primes:99991 99989 99971 
+elapsed time = 5.794338 (sec)
+
+There are 9592 primes less than or equal to 100000
+First three primes:2 3 5 
+Last three primes:99991 99989 99971 
+elapsed time = 5.790103 (sec)
+
+200,000 results:
+There are 17984 primes less than or equal to 200000
+First three primes:2 3 5 
+Last three primes:199999 199967 199961 
+elapsed time = 21.936496 (sec)
+
+There are 17984 primes less than or equal to 200000
+First three primes:2 3 5 
+Last three primes:199999 199967 199961 
+elapsed time = 21.690070 (sec)
+
+There are 17984 primes less than or equal to 200000
+First three primes:2 3 5 
+Last three primes:199999 199967 199961 
+elapsed time = 21.664759 (sec)
+
+300,000 results:
+There are 25997 primes less than or equal to 300000
+First three primes:2 3 5 
+Last three primes:299993 299983 299977 
+elapsed time = 46.905771 (sec)
+
+There are 25997 primes less than or equal to 300000
+First three primes:2 3 5 
+Last three primes:299993 299983 299977 
+elapsed time = 46.924258 (sec)
+
+There are 25997 primes less than or equal to 300000
+First three primes:2 3 5 
+Last three primes:299993 299983 299977 
+elapsed time = 46.973744 (sec)
+
+
+SIEVE1:
+
+100,000 results:
+There are 50000 primes less than or equal to 100000
+First three primes:2 3 5 
+Last three primes:99999 99997 99995 
+elapsed time = 0.012273 (sec)
+
+There are 50000 primes less than or equal to 100000
+First three primes:2 3 5 
+Last three primes:99999 99997 99995 
+elapsed time = 0.010406 (sec)
+
+There are 50000 primes less than or equal to 100000
+First three primes:2 3 5 
+Last three primes:99999 99997 99995 
+elapsed time = 0.008530 (sec)
+
+200,000 results:
+There are 100000 primes less than or equal to 200000
+First three primes:2 3 5 
+Last three primes:199999 199997 199995 
+elapsed time = 0.017996 (sec)
+
+There are 100000 primes less than or equal to 200000
+First three primes:2 3 5 
+Last three primes:199999 199997 199995 
+elapsed time = 0.016642 (sec)
+
+There are 100000 primes less than or equal to 200000
+First three primes:2 3 5 
+Last three primes:199999 199997 199995 
+elapsed time = 0.013881 (sec)
+
+300,000 results:
+There are 150000 primes less than or equal to 300000
+First three primes:2 3 5 
+Last three primes:299999 299997 299995 
+elapsed time = 0.024822 (sec)
+
+There are 150000 primes less than or equal to 300000
+First three primes:2 3 5 
+Last three primes:299999 299997 299995 
+elapsed time = 0.023542 (sec)
+
+There are 150000 primes less than or equal to 300000
+First three primes:2 3 5 
+Last three primes:299999 299997 299995 
+elapsed time = 0.023196 (sec)
+
+SIEVE2:
+(right now this is tmux in boston!!!)
+500,000,000 (stored Data1)
+
+1,000,000,000 (stored Data2)
+
+1,500,000,000 (stored Data3)

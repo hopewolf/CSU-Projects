@@ -1,0 +1,1 @@
+get_last_row is an executable that will return the last row of a given knapsack problem.  The input is exactly the same format as the given sequential knapsack format.  I recommend you work through this with a simple example and try to understand how a cutpoint is chosen. 

@@ -1,0 +1,8 @@
+i x N + j + offset (to find a element in mem).
+need coords of the block with the local coords within the block to get an element. A[i][j][k][l].
+n is the num of blocks with b being the size of the blocks.
+we want to see this as: ixnb^2 + jb^2 + kb + l
+where i is block rows, j is block col, k is elem row, l is elem col within the block.
+study the wrapper class.
+figure out what verify is.
+alphas generated this.

@@ -1,0 +1,116 @@
+See for Different types of Schedule: https://www.dartmouth.edu/~rc/classes/intro_openmp/schedule_loops.html
+
+Observations:
+    There are 2 significant digits, execution time between threads can be very variable but time between the runs on a thread are not variable.
+    1) The darker the pixel the less iterations occured within the inner loop, white pixels hit their max number of iterations defined by your argument value, thus not taking the break statement and being white.
+    2) The most iterations occur in the white area, this is becuase all of the iterations occur.
+    3) The threads work on the inner loop in a round robin waiting for the previous calculation of z_img and z_real which is the dependancy for the inner loop. A thread will have about the same up until the inner loop breaks by one thread
+    4) A possible better schedule could be instead of threads being given to each pixel in a row, a thread be given an entire row of pixels giving it a better spread of work load between threads.
+
+    
+Executed with bash script: for i in `seq 1 8`; do export OMP_NUM_THREADS=$i; for j in `seq 1 7` ; do ./mandOMP 1000; done; done > Data
+
+
+1 THREAD:
+mandSEQ 1000: 5.516858 
+mandOMP 1000: 
+ 5.531370 
+ 5.470187 
+ 5.485949 
+ 5.471052 
+ 5.470632 
+ 5.487235 
+ 5.471149 
+    OMP Median: 5.483939143 
+    Speedup: 
+
+2 THREADS:
+mandSEQ 1000: 5.516858 
+mandOMP 1000: 
+ 2.921067 
+ 2.910856 
+ 2.906579 
+ 2.910867 
+ 2.932801 
+ 2.966959 
+ 2.916656 
+    OMP Median: 2.923683571 
+    Speedup: 
+
+3 THREADS:
+mandSEQ 1000: 5.516858 
+mandOMP 1000: 
+ 2.828481 
+ 2.835066 
+ 2.832911 
+ 2.821169 
+ 2.854172 
+ 2.837079 
+ 2.924837 
+    OMP Median: 2.847673571
+    Speedup: 
+
+4 THREADS:
+mandSEQ 1000: 5.516858 
+mandOMP 1000: 
+ 2.034243 
+ 1.957683 
+ 1.909763 
+ 1.928157 
+ 1.909452 
+ 1.953917 
+ 1.908723 
+    OMP Median: 1.943134 
+    Speedup: 
+
+5 THREADS:
+mandSEQ 1000: 5.516858 
+mandOMP 1000: 
+ 1.988553 
+ 1.987519 
+ 1.977933 
+ 1.982410 
+ 1.980647 
+ 2.023949 
+ 1.981029 
+    OMP Median: 1.988862857 
+    Speedup: 
+
+6 THREADS:
+mandSEQ 1000: 5.516858 
+mandOMP 1000: 
+ 1.532994 
+ 1.524209 
+ 1.522883 
+ 1.521187 
+ 1.524855 
+ 1.554948 
+ 1.525177 
+    OMP Median: 1.529464714
+    Speedup: 
+    
+7 THREADS:
+mandSEQ 1000: 5.516858 
+mandOMP 1000: 
+ 1.503818 
+ 1.501272 
+ 1.530146 
+ 1.504704 
+ 1.502830 
+ 1.501551 
+ 1.532308 
+    OMP Median: 1.510947
+    Speedup: 
+
+8 THREADS:
+mandSEQ 1000: 5.516858 
+mandOMP 1000:
+ 1.251804 
+ 1.252365 
+ 1.254694 
+ 1.251757 
+ 1.247718 
+ 1.249476 
+ 1.248767 
+    OMP Median: 1.250940143
+    Speedup: 

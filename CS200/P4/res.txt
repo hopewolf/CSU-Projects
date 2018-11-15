@@ -1,0 +1,28 @@
+EQUATION DRIVER
+
+next line: a = not false
+result: [a: true]
+
+next line: b = a and not false
+result: [b: true]
+
+next line: m1 = true and false
+result: [m1: false]
+
+next line: h2 = m1 or true
+result: [h2: true]
+
+next line: 
+result: null
+
+next line: r = m1 and h2
+result: [r: false]
+
+next line: s = (m1 or h2) and r
+result: [s: false]
+
+next line: bbb = true
+result: [bbb: true]
+
+next line: n = bbb and not r
+result: [n: true]

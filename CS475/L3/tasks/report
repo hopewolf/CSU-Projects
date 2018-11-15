@@ -1,0 +1,12 @@
+Mean seq run time: 15.909158 seconds
+
+NOTE: Get the times for the unpruned parrallel using tmux ctrl b d (keystrokes)
+
+for i in `seq 1 8`; do export OMP_NUM_THREADS=$i; for j in `seq 1 7` ; do ./Merge_sortP; done; done > DataP
+
+for i in `seq 1 8`; do export OMP_NUM_THREADS=$i; for j in `seq 1 7` ; do ./Merge_sortNP; done; done > DataNP
+
+for i in `seq 1 8`; do export OMP_NUM_THREADS=$i; for j in `seq 1 7` ; do ./Merge_sortS; done; done > DataS
+
+the tmux is on the computer: jackosn
+tmux ls then tmux attach -t #ofsession
