@@ -1,0 +1,49 @@
+powderhorn:~/cs253/Recitation4$ gdb test
+GNU gdb (GDB) Fedora 7.12.1-48.fc25
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from test...done.
+(gdb) 
+(gdb) start 1
+Temporary breakpoint 1 at 0x400ca6: file factorial.cpp, line 11.
+Starting program: /s/bach/m/under/lburford/cs253/Recitation4/test 1
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.24-10.fc25.x86_64
+
+Temporary breakpoint 1, main (argc=2, argv=0x7fffffffe328) at factorial.cpp:11
+11	    if (argc != 2)
+Missing separate debuginfos, use: dnf debuginfo-install libgcc-6.4.1-1.fc25.x86_64 libstdc++-6.4.1-1.fc25.x86_64
+(gdb) next
+13	    int n = std::stoi(argv[1]); //converts string to int
+(gdb) 
+14	    long val=factorial(n);
+(gdb) step
+factorial (n=1) at factorial.cpp:21
+21	    long result = 1;
+(gdb) 
+22	    while(n--)
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 29418] will be killed.
+
+Quit anyway? (y or n) y
+powderhorn:~/cs253/Recitation4$ g++ -Wall -I. -g factorial.cpp -o test
+powderhorn:~/cs253/Recitation4$ ./test 2
+1
+powderhorn:~/cs253/Recitation4$ ./test 3
+2
+powderhorn:~/cs253/Recitation4$ ./test 4
+6
+powderhorn:~/cs253/Recitation4$ ./test 5
+24

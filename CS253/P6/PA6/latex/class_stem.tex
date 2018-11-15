@@ -1,0 +1,219 @@
+\hypertarget{class_stem}{}\section{Stem Class Reference}
+\label{class_stem}\index{Stem@{Stem}}
+
+
+My Stemmer class.  
+
+
+
+
+{\ttfamily \#include $<$Stem.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_stem_af3092c54c7551ab083c335d7dbb94c86}{Step1} (string s\+In)
+\item 
+string \hyperlink{class_stem_adadb6c35d5d8de25bfd4c39c13d47a8d}{Step2} (string \&s\+In)
+\item 
+string \hyperlink{class_stem_ae1e82f3cf3753cad9d99ada7f25d7697}{Step3} (string \&s\+In)
+\item 
+string \hyperlink{class_stem_a5d10addfe4f64dd68ac05227ae302977}{Step4} (string \&s\+In)
+\item 
+string \hyperlink{class_stem_af58972e6f9b64d6ca8fa18a6db13a5a6}{Step5} (string \&s\+In)
+\item 
+string \hyperlink{class_stem_a32d6b1690a87ce0f3f768e2be07bdcb5}{Step6} (string \&s\+In)
+\item 
+string \hyperlink{class_stem_a02934d9655b34dd4fb7d702359d01f32}{Step7} (string \&s\+In)
+\item 
+string \hyperlink{class_stem_a01a72f854d2b3846153560b2edd9d71f}{Step8} (string \&s\+In)
+\item 
+const string \hyperlink{class_stem_a92e01a887a1cdf6cba833639e3fe0bc7}{step3\+Replace} (string \&s\+In, const string \&suffix)
+\item 
+const bool \hyperlink{class_stem_a2a6706d496bb435848a5b585cd53503e}{step6\+Suf\+Is\+Reg1} (const string \&s\+In, const string \&suffix)
+\item 
+const bool \hyperlink{class_stem_adc4753b96d823602c46699613196cd28}{step6\+Suf\+Is\+Reg2} (const string \&s\+In, const string \&suffix)
+\item 
+string \hyperlink{class_stem_a1833c97aaa729ef6e21ee9d53972bec2}{step7\+Region2} (string \&s\+In)
+\item 
+const bool \hyperlink{class_stem_acbe5708482ee52612b29bcc6872cc7cf}{is\+Vowel} (const string \&s\+In, int at)
+\item 
+const bool \hyperlink{class_stem_a56081e6af3591dd325b8a34dc1f6e0ab}{is\+Vowel} (const string \&s\+In)
+\item 
+const bool \hyperlink{class_stem_a0db7a87086d2fc5e88dcc5ccf5c15bde}{is\+Double} (const string \&s\+In, int at)
+\item 
+const bool \hyperlink{class_stem_ac0cf0f97ff0f65029061ee03bc366874}{is\+Li\+Ending} (const string \&s\+In)
+\item 
+const string \hyperlink{class_stem_aefe1ebdd09e2c9be6e70d986740f8a2f}{Region1} (const string \&s\+In)
+\item 
+const string \hyperlink{class_stem_a343616cfb550f5c192b4dbbb8f79789b}{Region2} (const string \&s\+In)
+\item 
+const string \hyperlink{class_stem_ac95ecce7610007cf1c4d27f504acbc00}{Preceder} (const string \&s\+In, const string \&suffix)
+\item 
+const bool \hyperlink{class_stem_a88f66ffd8b23e3da2e955888e802c780}{is\+Short\+Syllable} (const string \&s\+In)
+\item 
+const bool \hyperlink{class_stem_a709f4d5f630b10ef59025a5b3d738a17}{is\+Short} (const string \&s\+In)
+\item 
+string \hyperlink{class_stem_a3715bc3610477aaa57db94909717af84}{Replace} (string \&s\+In, const string \&s\+New, int start)
+\item 
+const bool \hyperlink{class_stem_a697fe82ce02b97fdeb9e4a6c458f4ec4}{Find} (const string \&s\+In, const string \&suffix)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+My Stemmer class. 
+
+\hyperlink{class_stem}{Stem} will take in strings and using a algorithim return a very specific change to that string depending on the algorithim. \begin{DoxyNote}{Note}
+stem uses the default constructor 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_stem_a697fe82ce02b97fdeb9e4a6c458f4ec4}\label{class_stem_a697fe82ce02b97fdeb9e4a6c458f4ec4}} 
+\index{Stem@{Stem}!Find@{Find}}
+\index{Find@{Find}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{Find()}{Find()}}
+{\footnotesize\ttfamily const bool Stem\+::\+Find (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In,  }\item[{const string \&}]{suffix }\end{DoxyParamCaption})}
+
+Find if the suffix is in the s\+In string Return true if it is in it, false if not \mbox{\Hypertarget{class_stem_a0db7a87086d2fc5e88dcc5ccf5c15bde}\label{class_stem_a0db7a87086d2fc5e88dcc5ccf5c15bde}} 
+\index{Stem@{Stem}!is\+Double@{is\+Double}}
+\index{is\+Double@{is\+Double}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{is\+Double()}{isDouble()}}
+{\footnotesize\ttfamily const bool Stem\+::is\+Double (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In,  }\item[{int}]{at }\end{DoxyParamCaption})}
+
+Checks to see if a string contains a double, takes a int, will check that char(at index) and the char after for pair A double is any of the following letter pairs\+: \{‘bb’, ‘dd’, ‘ff’, ‘gg’, ‘mm’, ‘nn’, ‘pp’, ‘rr’, ‘tt’\}. \mbox{\Hypertarget{class_stem_ac0cf0f97ff0f65029061ee03bc366874}\label{class_stem_ac0cf0f97ff0f65029061ee03bc366874}} 
+\index{Stem@{Stem}!is\+Li\+Ending@{is\+Li\+Ending}}
+\index{is\+Li\+Ending@{is\+Li\+Ending}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{is\+Li\+Ending()}{isLiEnding()}}
+{\footnotesize\ttfamily const bool Stem\+::is\+Li\+Ending (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In }\end{DoxyParamCaption})}
+
+Checks to see if a string contains a valid li-\/ending A valid li-\/ending is one of \{‘c’, ‘d’, ‘e’, ‘g’, ‘h’, ‘k’, ‘m’, ‘n’, ‘r’, ‘t’\}. \mbox{\Hypertarget{class_stem_a709f4d5f630b10ef59025a5b3d738a17}\label{class_stem_a709f4d5f630b10ef59025a5b3d738a17}} 
+\index{Stem@{Stem}!is\+Short@{is\+Short}}
+\index{is\+Short@{is\+Short}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{is\+Short()}{isShort()}}
+{\footnotesize\ttfamily const bool Stem\+::is\+Short (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In }\end{DoxyParamCaption})}
+
+A word is called short if both (1) it ends in a short syllable and (2) its Region1 is empty. For example, bed, shed, and shred are short words, but bead, embed and beds are not. \mbox{\Hypertarget{class_stem_a88f66ffd8b23e3da2e955888e802c780}\label{class_stem_a88f66ffd8b23e3da2e955888e802c780}} 
+\index{Stem@{Stem}!is\+Short\+Syllable@{is\+Short\+Syllable}}
+\index{is\+Short\+Syllable@{is\+Short\+Syllable}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{is\+Short\+Syllable()}{isShortSyllable()}}
+{\footnotesize\ttfamily const bool Stem\+::is\+Short\+Syllable (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In }\end{DoxyParamCaption})}
+
+A string ends in a short syllable if either
+\begin{DoxyEnumerate}
+\item It ends with a non-\/vowel followed by a vowel followed by a non-\/vowel that is not one of \{‘w’, ‘x’ or ‘y’\}
+\item The string is only two characters long, and is a vowel followed by a non-\/vowel 
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_stem_acbe5708482ee52612b29bcc6872cc7cf}\label{class_stem_acbe5708482ee52612b29bcc6872cc7cf}} 
+\index{Stem@{Stem}!is\+Vowel@{is\+Vowel}}
+\index{is\+Vowel@{is\+Vowel}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{is\+Vowel()}{isVowel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const bool Stem\+::is\+Vowel (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In,  }\item[{int}]{at }\end{DoxyParamCaption})}
+
+Checks to see if a certain char in the string is a vowel A vowel is any of \{‘a’, ‘e’, ‘i’, ‘o’, ‘u’\} or the letter ‘y’ U\+N\+L\+E\+SS the ‘y’ is the first letter in a word or immediately follows a vowel. (Note that this is a recursive definition.) Therefor the letter ‘y’ is considered a vowel in the word try but a consonant (non-\/vowel) in the words yellow and today. \mbox{\Hypertarget{class_stem_a56081e6af3591dd325b8a34dc1f6e0ab}\label{class_stem_a56081e6af3591dd325b8a34dc1f6e0ab}} 
+\index{Stem@{Stem}!is\+Vowel@{is\+Vowel}}
+\index{is\+Vowel@{is\+Vowel}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{is\+Vowel()}{isVowel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const bool Stem\+::is\+Vowel (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In }\end{DoxyParamCaption})}
+
+Overide of is\+Vowel, where it checks if in any part of a string there is a vowel \mbox{\Hypertarget{class_stem_ac95ecce7610007cf1c4d27f504acbc00}\label{class_stem_ac95ecce7610007cf1c4d27f504acbc00}} 
+\index{Stem@{Stem}!Preceder@{Preceder}}
+\index{Preceder@{Preceder}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{Preceder()}{Preceder()}}
+{\footnotesize\ttfamily const string Stem\+::\+Preceder (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In,  }\item[{const string \&}]{suffix }\end{DoxyParamCaption})}
+
+The preceder is the part of a word before a given suffix. For example, if the suffix is ing then the preceder of talking is talk. \mbox{\Hypertarget{class_stem_aefe1ebdd09e2c9be6e70d986740f8a2f}\label{class_stem_aefe1ebdd09e2c9be6e70d986740f8a2f}} 
+\index{Stem@{Stem}!Region1@{Region1}}
+\index{Region1@{Region1}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{Region1()}{Region1()}}
+{\footnotesize\ttfamily const string Stem\+::\+Region1 (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In }\end{DoxyParamCaption})}
+
+Region1 is the substring that follows the first consonant (non-\/vowel) that follows a vowel. Region1 may be empty (it often is for short words). Examples\+: Region1(try) is empty, but Region1(definition) is inition \mbox{\Hypertarget{class_stem_a343616cfb550f5c192b4dbbb8f79789b}\label{class_stem_a343616cfb550f5c192b4dbbb8f79789b}} 
+\index{Stem@{Stem}!Region2@{Region2}}
+\index{Region2@{Region2}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{Region2()}{Region2()}}
+{\footnotesize\ttfamily const string Stem\+::\+Region2 (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In }\end{DoxyParamCaption})}
+
+Region2 is the Region1 of Region1. In other words, Region2(definition) = Region1(inition) = ition. \mbox{\Hypertarget{class_stem_a3715bc3610477aaa57db94909717af84}\label{class_stem_a3715bc3610477aaa57db94909717af84}} 
+\index{Stem@{Stem}!Replace@{Replace}}
+\index{Replace@{Replace}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{Replace()}{Replace()}}
+{\footnotesize\ttfamily string Stem\+::\+Replace (\begin{DoxyParamCaption}\item[{string \&}]{s\+In,  }\item[{const string \&}]{s\+New,  }\item[{int}]{start }\end{DoxyParamCaption})}
+
+Replace will erase a portion of string s\+In starting at start to length of s\+In Replace then will push the string s\+New to the back, if s\+New is null then nothing will be pushed to back \mbox{\Hypertarget{class_stem_af3092c54c7551ab083c335d7dbb94c86}\label{class_stem_af3092c54c7551ab083c335d7dbb94c86}} 
+\index{Stem@{Stem}!Step1@{Step1}}
+\index{Step1@{Step1}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{Step1()}{Step1()}}
+{\footnotesize\ttfamily string Stem\+::\+Step1 (\begin{DoxyParamCaption}\item[{string}]{s\+In }\end{DoxyParamCaption})}
+
+Step \#1 starts with a special case\+: if the word (i.\+e. string) begins with an apostrophe, remove the apostrophe. Then apply the longest of the following substitutions that apply (see assignment sheet for break down) \mbox{\Hypertarget{class_stem_adadb6c35d5d8de25bfd4c39c13d47a8d}\label{class_stem_adadb6c35d5d8de25bfd4c39c13d47a8d}} 
+\index{Stem@{Stem}!Step2@{Step2}}
+\index{Step2@{Step2}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{Step2()}{Step2()}}
+{\footnotesize\ttfamily string Stem\+::\+Step2 (\begin{DoxyParamCaption}\item[{string \&}]{s\+In }\end{DoxyParamCaption})}
+
+Step \#2 is as follows (remember, use only the longest that applies) (see assignment sheet for break down) \mbox{\Hypertarget{class_stem_ae1e82f3cf3753cad9d99ada7f25d7697}\label{class_stem_ae1e82f3cf3753cad9d99ada7f25d7697}} 
+\index{Stem@{Stem}!Step3@{Step3}}
+\index{Step3@{Step3}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{Step3()}{Step3()}}
+{\footnotesize\ttfamily string Stem\+::\+Step3 (\begin{DoxyParamCaption}\item[{string \&}]{s\+In }\end{DoxyParamCaption})}
+
+Step \#3 (see assignment sheet for break down) \mbox{\Hypertarget{class_stem_a92e01a887a1cdf6cba833639e3fe0bc7}\label{class_stem_a92e01a887a1cdf6cba833639e3fe0bc7}} 
+\index{Stem@{Stem}!step3\+Replace@{step3\+Replace}}
+\index{step3\+Replace@{step3\+Replace}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{step3\+Replace()}{step3Replace()}}
+{\footnotesize\ttfamily const string Stem\+::step3\+Replace (\begin{DoxyParamCaption}\item[{string \&}]{s\+In,  }\item[{const string \&}]{suffix }\end{DoxyParamCaption})}
+
+driver for step3, checks conditions for the 2nd row replace (see assignment sheet for break down) \mbox{\Hypertarget{class_stem_a5d10addfe4f64dd68ac05227ae302977}\label{class_stem_a5d10addfe4f64dd68ac05227ae302977}} 
+\index{Stem@{Stem}!Step4@{Step4}}
+\index{Step4@{Step4}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{Step4()}{Step4()}}
+{\footnotesize\ttfamily string Stem\+::\+Step4 (\begin{DoxyParamCaption}\item[{string \&}]{s\+In }\end{DoxyParamCaption})}
+
+Step \#4 (see assignment sheet for break down) \mbox{\Hypertarget{class_stem_af58972e6f9b64d6ca8fa18a6db13a5a6}\label{class_stem_af58972e6f9b64d6ca8fa18a6db13a5a6}} 
+\index{Stem@{Stem}!Step5@{Step5}}
+\index{Step5@{Step5}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{Step5()}{Step5()}}
+{\footnotesize\ttfamily string Stem\+::\+Step5 (\begin{DoxyParamCaption}\item[{string \&}]{s\+In }\end{DoxyParamCaption})}
+
+Step \#5 (see assignment sheet for break down) \mbox{\Hypertarget{class_stem_a32d6b1690a87ce0f3f768e2be07bdcb5}\label{class_stem_a32d6b1690a87ce0f3f768e2be07bdcb5}} 
+\index{Stem@{Stem}!Step6@{Step6}}
+\index{Step6@{Step6}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{Step6()}{Step6()}}
+{\footnotesize\ttfamily string Stem\+::\+Step6 (\begin{DoxyParamCaption}\item[{string \&}]{s\+In }\end{DoxyParamCaption})}
+
+Step \#6 rules all require that the prefix be in Region1 (one of the rules has a stronger condition, and requires the prefix to be in Region2) (see assignment sheet for break down) \mbox{\Hypertarget{class_stem_a2a6706d496bb435848a5b585cd53503e}\label{class_stem_a2a6706d496bb435848a5b585cd53503e}} 
+\index{Stem@{Stem}!step6\+Suf\+Is\+Reg1@{step6\+Suf\+Is\+Reg1}}
+\index{step6\+Suf\+Is\+Reg1@{step6\+Suf\+Is\+Reg1}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{step6\+Suf\+Is\+Reg1()}{step6SufIsReg1()}}
+{\footnotesize\ttfamily const bool Stem\+::step6\+Suf\+Is\+Reg1 (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In,  }\item[{const string \&}]{suffix }\end{DoxyParamCaption})}
+
+driver for step6, checks to see if the suffix is inside of region1 if suffix is in region1 return true else return false \mbox{\Hypertarget{class_stem_adc4753b96d823602c46699613196cd28}\label{class_stem_adc4753b96d823602c46699613196cd28}} 
+\index{Stem@{Stem}!step6\+Suf\+Is\+Reg2@{step6\+Suf\+Is\+Reg2}}
+\index{step6\+Suf\+Is\+Reg2@{step6\+Suf\+Is\+Reg2}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{step6\+Suf\+Is\+Reg2()}{step6SufIsReg2()}}
+{\footnotesize\ttfamily const bool Stem\+::step6\+Suf\+Is\+Reg2 (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In,  }\item[{const string \&}]{suffix }\end{DoxyParamCaption})}
+
+driver for step6, checks to see if the suffix is inside of region2 (which is in region1) if suffix is in region1 return true else return false \mbox{\Hypertarget{class_stem_a02934d9655b34dd4fb7d702359d01f32}\label{class_stem_a02934d9655b34dd4fb7d702359d01f32}} 
+\index{Stem@{Stem}!Step7@{Step7}}
+\index{Step7@{Step7}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{Step7()}{Step7()}}
+{\footnotesize\ttfamily string Stem\+::\+Step7 (\begin{DoxyParamCaption}\item[{string \&}]{s\+In }\end{DoxyParamCaption})}
+
+Step \#7 (see assignment sheet for break down) \mbox{\Hypertarget{class_stem_a1833c97aaa729ef6e21ee9d53972bec2}\label{class_stem_a1833c97aaa729ef6e21ee9d53972bec2}} 
+\index{Stem@{Stem}!step7\+Region2@{step7\+Region2}}
+\index{step7\+Region2@{step7\+Region2}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{step7\+Region2()}{step7Region2()}}
+{\footnotesize\ttfamily string Stem\+::step7\+Region2 (\begin{DoxyParamCaption}\item[{string \&}]{s\+In }\end{DoxyParamCaption})}
+
+driver for step7, checks the row1 suffixs to be in region2 \mbox{\Hypertarget{class_stem_a01a72f854d2b3846153560b2edd9d71f}\label{class_stem_a01a72f854d2b3846153560b2edd9d71f}} 
+\index{Stem@{Stem}!Step8@{Step8}}
+\index{Step8@{Step8}!Stem@{Stem}}
+\subsubsection{\texorpdfstring{Step8()}{Step8()}}
+{\footnotesize\ttfamily string Stem\+::\+Step8 (\begin{DoxyParamCaption}\item[{string \&}]{s\+In }\end{DoxyParamCaption})}
+
+Step \#8 (see assignment sheet for break down) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_stem_8h}{Stem.\+h}\item 
+\hyperlink{_stem_8cpp}{Stem.\+cpp}\end{DoxyCompactItemize}

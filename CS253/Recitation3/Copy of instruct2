@@ -1,0 +1,21 @@
+1. Compile main.cpp using -g option
+
+2. Run the program, main function takes 1 as the argument
+
+3. Go to debug mode of main
+
+3. List the first 10 lines of the source code
+
+4. Run the program with the required argument
+
+5. Back trace the crash using where
+
+6. Start and step through the program.
+
+7. There is a for loop inside the main function,
+	print the value of 'val' everytime 'val' changes
+
+8. Copy all of your results from your terminal to a text file, upload to google drive R3
+	Name it as LastName.FirstName.txt
+
+9. Sign your name at front desk

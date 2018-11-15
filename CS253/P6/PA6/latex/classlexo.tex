@@ -1,0 +1,171 @@
+\hypertarget{classlexo}{}\section{lexo Class Reference}
+\label{classlexo}\index{lexo@{lexo}}
+
+
+{\ttfamily \#include $<$lexo.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlexo_a34ba088eb55d6f44c3fa0c02cf29c81d}{lexo} (\hyperlink{class_stem_excep}{Stem\+Excep} \&se)
+\item 
+void \hyperlink{classlexo_ac52caed43b8e4660b8dfe662648f16f0}{check\+Eng} (string \&s\+In)
+\item 
+void \hyperlink{classlexo_abc36453dc84f4ddb5f0aaaf6a59a7f56}{check\+Punct} (string \&s\+In, int pos)
+\item 
+void \hyperlink{classlexo_a5bbec0791966d024a09c6de4f12d278c}{check\+Dig} (string \&s\+In, int pos)
+\item 
+void \hyperlink{classlexo_a7ac14e81c979e5221ff0ecd1f418e7f7}{check\+Alpha} (string \&s\+In, int pos)
+\item 
+string \hyperlink{classlexo_a34c8664aad660450936c6fd3f7b235b0}{check\+Word} (string \&s\+In)
+\item 
+string \hyperlink{classlexo_a0e0470fe5a129ab3368044af5c48fc66}{sub\+String} (string \&s\+In, int size)
+\item 
+void \hyperlink{classlexo_a76321bcd5e6510b0c29f7c420de9e211}{addamb\+Vector} (const string \&s\+In)
+\item 
+void \hyperlink{classlexo_aa22bedaba538d542d58d5cb78c55219b}{addunamb\+Vector} (const string \&s\+In)
+\item 
+void \hyperlink{classlexo_a3d857c46564021e8184fa120f219a29a}{addl\+Vector} (const string \&s\+In)
+\item 
+void \hyperlink{classlexo_ac8001ad317bfa10094990fc5d8c6ae10}{lex\+Sort} ()
+\item 
+void \hyperlink{classlexo_a17c552c5bd0d48a836711dc0716e79ee}{lex\+Calc\+Freq} ()
+\item 
+void \hyperlink{classlexo_a2f58dbc91b5038e59c0409139b3de22f}{add\+Freq\+Map} (const string \&s\+In)
+\item 
+bool \hyperlink{classlexo_ab8a61fb14f89b9e1c5e181f72d734af5}{check\+Ambigous} (string s\+In)
+\item 
+void \hyperlink{classlexo_a90e76d7e93c55b874f92d35375a7b9e6}{clear\+Amb} ()
+\item 
+const void \hyperlink{classlexo_af37343d245d4ca3d53e100cdf9f5ec02}{print\+Map} ()
+\item 
+const int \hyperlink{classlexo_a8d65ae4edf561a3e402197163a7f8ebb}{get\+Map\+Word\+Count} (const string \&s\+In)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, int $>$ \hyperlink{classlexo_afc2b084af343d8f4ef8d1901db978035}{freq\+Map}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlexo_a34ba088eb55d6f44c3fa0c02cf29c81d}\label{classlexo_a34ba088eb55d6f44c3fa0c02cf29c81d}} 
+\index{lexo@{lexo}!lexo@{lexo}}
+\index{lexo@{lexo}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{lexo()}{lexo()}}
+{\footnotesize\ttfamily lexo\+::lexo (\begin{DoxyParamCaption}\item[{\hyperlink{class_stem_excep}{Stem\+Excep} \&}]{se }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlexo_a76321bcd5e6510b0c29f7c420de9e211}\label{classlexo_a76321bcd5e6510b0c29f7c420de9e211}} 
+\index{lexo@{lexo}!addamb\+Vector@{addamb\+Vector}}
+\index{addamb\+Vector@{addamb\+Vector}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{addamb\+Vector()}{addambVector()}}
+{\footnotesize\ttfamily void lexo\+::addamb\+Vector (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_a2f58dbc91b5038e59c0409139b3de22f}\label{classlexo_a2f58dbc91b5038e59c0409139b3de22f}} 
+\index{lexo@{lexo}!add\+Freq\+Map@{add\+Freq\+Map}}
+\index{add\+Freq\+Map@{add\+Freq\+Map}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{add\+Freq\+Map()}{addFreqMap()}}
+{\footnotesize\ttfamily void lexo\+::add\+Freq\+Map (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_a3d857c46564021e8184fa120f219a29a}\label{classlexo_a3d857c46564021e8184fa120f219a29a}} 
+\index{lexo@{lexo}!addl\+Vector@{addl\+Vector}}
+\index{addl\+Vector@{addl\+Vector}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{addl\+Vector()}{addlVector()}}
+{\footnotesize\ttfamily void lexo\+::addl\+Vector (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_aa22bedaba538d542d58d5cb78c55219b}\label{classlexo_aa22bedaba538d542d58d5cb78c55219b}} 
+\index{lexo@{lexo}!addunamb\+Vector@{addunamb\+Vector}}
+\index{addunamb\+Vector@{addunamb\+Vector}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{addunamb\+Vector()}{addunambVector()}}
+{\footnotesize\ttfamily void lexo\+::addunamb\+Vector (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_a7ac14e81c979e5221ff0ecd1f418e7f7}\label{classlexo_a7ac14e81c979e5221ff0ecd1f418e7f7}} 
+\index{lexo@{lexo}!check\+Alpha@{check\+Alpha}}
+\index{check\+Alpha@{check\+Alpha}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{check\+Alpha()}{checkAlpha()}}
+{\footnotesize\ttfamily void lexo\+::check\+Alpha (\begin{DoxyParamCaption}\item[{string \&}]{s\+In,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_ab8a61fb14f89b9e1c5e181f72d734af5}\label{classlexo_ab8a61fb14f89b9e1c5e181f72d734af5}} 
+\index{lexo@{lexo}!check\+Ambigous@{check\+Ambigous}}
+\index{check\+Ambigous@{check\+Ambigous}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{check\+Ambigous()}{checkAmbigous()}}
+{\footnotesize\ttfamily bool lexo\+::check\+Ambigous (\begin{DoxyParamCaption}\item[{string}]{s\+In }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_a5bbec0791966d024a09c6de4f12d278c}\label{classlexo_a5bbec0791966d024a09c6de4f12d278c}} 
+\index{lexo@{lexo}!check\+Dig@{check\+Dig}}
+\index{check\+Dig@{check\+Dig}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{check\+Dig()}{checkDig()}}
+{\footnotesize\ttfamily void lexo\+::check\+Dig (\begin{DoxyParamCaption}\item[{string \&}]{s\+In,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_ac52caed43b8e4660b8dfe662648f16f0}\label{classlexo_ac52caed43b8e4660b8dfe662648f16f0}} 
+\index{lexo@{lexo}!check\+Eng@{check\+Eng}}
+\index{check\+Eng@{check\+Eng}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{check\+Eng()}{checkEng()}}
+{\footnotesize\ttfamily void lexo\+::check\+Eng (\begin{DoxyParamCaption}\item[{string \&}]{s\+In }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_abc36453dc84f4ddb5f0aaaf6a59a7f56}\label{classlexo_abc36453dc84f4ddb5f0aaaf6a59a7f56}} 
+\index{lexo@{lexo}!check\+Punct@{check\+Punct}}
+\index{check\+Punct@{check\+Punct}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{check\+Punct()}{checkPunct()}}
+{\footnotesize\ttfamily void lexo\+::check\+Punct (\begin{DoxyParamCaption}\item[{string \&}]{s\+In,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_a34c8664aad660450936c6fd3f7b235b0}\label{classlexo_a34c8664aad660450936c6fd3f7b235b0}} 
+\index{lexo@{lexo}!check\+Word@{check\+Word}}
+\index{check\+Word@{check\+Word}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{check\+Word()}{checkWord()}}
+{\footnotesize\ttfamily string lexo\+::check\+Word (\begin{DoxyParamCaption}\item[{string \&}]{s\+In }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_a90e76d7e93c55b874f92d35375a7b9e6}\label{classlexo_a90e76d7e93c55b874f92d35375a7b9e6}} 
+\index{lexo@{lexo}!clear\+Amb@{clear\+Amb}}
+\index{clear\+Amb@{clear\+Amb}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{clear\+Amb()}{clearAmb()}}
+{\footnotesize\ttfamily void lexo\+::clear\+Amb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_a8d65ae4edf561a3e402197163a7f8ebb}\label{classlexo_a8d65ae4edf561a3e402197163a7f8ebb}} 
+\index{lexo@{lexo}!get\+Map\+Word\+Count@{get\+Map\+Word\+Count}}
+\index{get\+Map\+Word\+Count@{get\+Map\+Word\+Count}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{get\+Map\+Word\+Count()}{getMapWordCount()}}
+{\footnotesize\ttfamily const int lexo\+::get\+Map\+Word\+Count (\begin{DoxyParamCaption}\item[{const string \&}]{s\+In }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_a17c552c5bd0d48a836711dc0716e79ee}\label{classlexo_a17c552c5bd0d48a836711dc0716e79ee}} 
+\index{lexo@{lexo}!lex\+Calc\+Freq@{lex\+Calc\+Freq}}
+\index{lex\+Calc\+Freq@{lex\+Calc\+Freq}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{lex\+Calc\+Freq()}{lexCalcFreq()}}
+{\footnotesize\ttfamily void lexo\+::lex\+Calc\+Freq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_ac8001ad317bfa10094990fc5d8c6ae10}\label{classlexo_ac8001ad317bfa10094990fc5d8c6ae10}} 
+\index{lexo@{lexo}!lex\+Sort@{lex\+Sort}}
+\index{lex\+Sort@{lex\+Sort}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{lex\+Sort()}{lexSort()}}
+{\footnotesize\ttfamily void lexo\+::lex\+Sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_af37343d245d4ca3d53e100cdf9f5ec02}\label{classlexo_af37343d245d4ca3d53e100cdf9f5ec02}} 
+\index{lexo@{lexo}!print\+Map@{print\+Map}}
+\index{print\+Map@{print\+Map}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{print\+Map()}{printMap()}}
+{\footnotesize\ttfamily const void lexo\+::print\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlexo_a0e0470fe5a129ab3368044af5c48fc66}\label{classlexo_a0e0470fe5a129ab3368044af5c48fc66}} 
+\index{lexo@{lexo}!sub\+String@{sub\+String}}
+\index{sub\+String@{sub\+String}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{sub\+String()}{subString()}}
+{\footnotesize\ttfamily string lexo\+::sub\+String (\begin{DoxyParamCaption}\item[{string \&}]{s\+In,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classlexo_afc2b084af343d8f4ef8d1901db978035}\label{classlexo_afc2b084af343d8f4ef8d1901db978035}} 
+\index{lexo@{lexo}!freq\+Map@{freq\+Map}}
+\index{freq\+Map@{freq\+Map}!lexo@{lexo}}
+\subsubsection{\texorpdfstring{freq\+Map}{freqMap}}
+{\footnotesize\ttfamily map$<$string,int$>$ lexo\+::freq\+Map}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lexo_8h}{lexo.\+h}\item 
+\hyperlink{lexo_8cpp}{lexo.\+cpp}\end{DoxyCompactItemize}

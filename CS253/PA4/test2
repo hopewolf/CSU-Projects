@@ -1,0 +1,266 @@
+'''''PunctuationString'''''
+'''''Shouldn'tBeChanged'''''
+!@#$%^&*()_
++
+
+'''''OneOrMoreCapitals'''''
+'''''Shouldn'tBeChanged'''''
+aBcde
+Abcde
+abcDE
+
+'''''OneOrMoreDigits'''''
+'''''Shouldn'tBeChanged'''''
+9
+a2
+33
+a1b
+
+'''''WordsWithPlusMarker'''''
+'''''Shouldn'tBeChanged'''''
+.!? Will
+... Ab
+!!! C
+??? Busses
+
+'''''TwoCharactersOrLess'''''
+'''''Shouldn'tBeChanged'''''
+ab
+a
+Ab
+aB
+
+
+
+
+
+'''''''''''''''''''''''
+'''''PorterStepOne'''''
+'''''''''''''''''''''''
+arowonez's'    '''RowOne'''
+'arowonez's'   '''RowOneWithSpecialCase'''
+
+arowtwoz's     '''RowTwo'''
+'arowtwoz's    '''RowTwoWithSpecialCase'''
+
+arowthreez'    '''RowThree'''
+'arowthreez'   '''RowThreeWithSpecialCase'''
+
+'''''''''''''''''''''''
+'''''PorterStepTwo'''''
+'''''''''''''''''''''''
+browonezsses   '''RowOne'''
+browtwozied    '''RowTwoIEDreplaceI'''
+browtwozies    '''RowTwoIESreplaceI'''
+bied           '''RowTwoIEDreplaceIE'''
+bies           '''RowTwoIESreplaceIE'''
+browthreezus   '''RowThree'''
+browfourzss    '''RowFour'''
+browfivezs     '''RowFiveConditionMet'''
+browfivezas    '''RowFiveConditionMet'''
+bs             '''RowFiveConditionNotMet'''
+bas            '''RowFiveConditionNotMet'''
+
+'''''''''''''''''''''''''
+'''''PorterStepThree'''''
+'''''''''''''''''''''''''
+crowonezeed    '''RowOneEEDconditionMet'''
+crowonezeedly  '''RowOneEEDLYconditionMet'''
+ceed           '''RowOneEDconditionNotMet'''
+ceedly         '''RowOneEEDLYconditionNotMet'''
+
+''''RowTwoNoSpecialReplacements''''
+crowtwozed     '''RowTwoEDconditionMet'''
+crowtwozedly   '''RowTwoEDLYconditionMet'''
+crowtwozing    '''RowTwoINGconditionMet'''
+crowtwozingly  '''RowTwoINGLYconditionMet'''
+
+crwtwed        '''RowTwoEDconditionNotMet'''
+crwtwedly      '''RowTwoEDLYconditionNotMet'''
+crwtwing       '''RowTwoINGconditionNotMet'''
+crwtwingly     '''RowTwoINGLYconditionNotMet'''
+
+''''RowTwoReplacement1''''
+crowtwozated
+crowtwozatedly
+crowtwozating
+crowtwozatingly
+
+crowtwozbled
+crowtwozbledly
+crowtwozbling
+crowtwozblingly
+
+crowtwozized
+crowtwozizedly
+crowtwozizing
+crowtwozizingly
+
+''''RowTwoReplacement2''''
+crowtwozdded
+crowtwozddedly
+crowtwozdding
+crowtwozddingly
+
+''''RowTwoReplacement3''''
+cazed
+cazedly
+cazing
+cazingly
+
+''''''''''''''''''''''''
+'''''PorterStepFour'''''
+''''''''''''''''''''''''
+dy             '''RowOneConditionNotMet'''
+duy            '''RowOneConditionNotMet'''
+ddy            '''RowOneConditionMet'''
+
+''''''''''''''''''''''''
+'''''PorterStepFive'''''
+''''''''''''''''''''''''
+frowoneztional
+frowtwozenci
+frowthreezanci
+frowfourzabli
+frowfivezentli
+frowsixzizer
+frowsixzization
+frowsevenzational
+frowsevenzation
+frowsevenzator
+froweightzalism
+froweightzaliti
+froweightzalli
+frowninezfulness
+frowtenzousli
+frowtenzousness
+frowelevenziveness
+frowelevenziviti
+frowtwelvezbiliti
+frowtwelvezbli
+frowthirteenzogi   '''RowThirteenConditionNotMet'''
+frowthirteenzlogi  '''RowThirteenConditionMet'''
+frowfourteenzfulli
+frowfifteenzlessli
+frowsixteenzli     '''RowSixteenConditionNotMet'''
+frowsixteenztli    '''RowSixteenConditionMet'''
+
+'''''''''''''''''''''''
+'''''PorterStepSix'''''
+'''''''''''''''''''''''
+''''tionALISMsoThatStepFiveGivesUsTIONAL''''
+gztionalism           '''RowOneConditionNotMet'''
+growoneztionalism     '''RowOneConditionMet'''
+
+''''ationALISMsoThatStepFiveGivesUsATIONAL''''
+''''NoteStepSevenWillFurtherModifyThis''''
+gationalism         '''RowTwoConditionNotMet'''
+growtwozationalism  '''RowTwoConditionMet'''
+
+''''NoteStepEightWillFurtherModifyThis''''
+galize              '''RowThreeConditionNotMet'''
+''''NoteStepSevenWillFurtherModifyThis''''
+growthreezalize     '''RowThreeConditionMet'''
+
+''''NoMoreWarningsAboutFutureModifications''''!!!
+
+gicate              '''RowFourICATEconditionNotMet'''
+giciti              '''RowFourICITIconditionNotMet'''
+gical               '''RowFourICALconditionNotMet'''
+growfourzicate      '''RowFourICATEconditionMet'''
+growfourziciti      '''RowFourICITIconditionMet'''
+growfourzical       '''RowFourICALconditionMet'''
+
+gful                '''RowFiveFULconditionNotMet'''
+gness               '''RowFiveNESSconditionNotMet'''
+growfivezful        '''RowFiveFULconditionMet'''
+growfivezness       '''RowFiveNESSconditionMet'''
+
+gative              '''RowSixConditionNotMet'''
+guzative            '''RowSixConditionNotMet'''
+growsixzative       '''RowSixConditionMet'''
+
+'''''''''''''''''''''''''
+'''''PorterStepSeven'''''
+'''''''''''''''''''''''''
+''''RowOneConditionNotMet''''
+''''SuffixNotInRegion1Or2''''
+hal
+hance
+hence
+her
+hic
+hable
+hible
+hant
+hement
+hment
+hent
+hism
+hate
+hiti
+hous
+hive
+hize
+
+''''RowOneConditionNotMet''''
+''''SuffixNotInRegion2''''
+huzal
+huzance
+huzence
+huzer
+huzic
+huzable
+huzible
+huzant
+huzement
+huzment
+huzent
+huzism
+huzate
+huziti
+huzous
+huzive
+huzize
+
+''''RowOneConditionMet''''
+huzuzuzuzal
+huzuzuzuzance
+huzuzuzuzence
+huzuzuzuzer
+huzuzuzuzic
+huzuzuzuzable
+huzuzuzuzible
+huzuzuzuzant
+huzuzuzuzement
+huzuzuzuzment
+huzuzuzuzent
+huzuzuzuzism
+huzuzuzuzate
+huzuzuzuziti
+huzuzuzuzous
+huzuzuzuzive
+huzuzuzuzize
+
+hzion           '''RowTwoConditionNotMet'''
+hzizion         '''RowTwoConditionNotMet'''
+hzizuzion       '''RowTwoConditionNotMet'''
+hzsion          '''RowTwoConditionNotMet'''
+hztion          '''RowTwoConditionNotMet'''
+hzizuzsion      '''RowTwoConditionMet'''
+hzizuztion      '''RowTwoConditionMet'''
+
+'''''''''''''''''''''''''
+'''''PorterStepEight'''''
+'''''''''''''''''''''''''
+je              '''RowOneConditionNotMet''' '''NoRegion1Or2'''
+jzze            '''RowOneConditionNotMet''' '''NoRegion1Or2'''
+jaze            '''RowOneConditionNotMet''' '''Region1ButShortSyllable'''
+jvave           '''RowOneConditionNotMet''' '''Region1ButShortSyllable'''
+jazze           '''RowOneConditionMet'''    '''Region1AndNoShortSyllable'''
+jgexe           '''RowOneConditionMet'''    '''Region1AndNoShortSyllableWithTheX'''
+jazazazaze      '''RowOneConditionMet'''    '''Region2'''
+
+jzzl            '''RowTwoConditionNotMet''' '''NoRegion2'''
+jozozozl        '''RowTwoConditionNotMet''' '''Region2ButNoLL'''
+jazazazll       '''RowTwoConditionMet'''    '''Region2AndLL'''

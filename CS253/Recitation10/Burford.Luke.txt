@@ -1,0 +1,131 @@
+purgatory:~/cs253$ cd P6
+purgatory:~/cs253/P6$ ls
+callgrind.out.9085  doc2  myOut   PA6	   test1  test3    valid_exceptions.txt
+doc1		    doc3  output  PA6.tar  test2  testMap
+purgatory:~/cs253/P6$ mkdir testsvn
+purgatory:~/cs253/P6$ cd testsvn/
+purgatory:~/cs253/P6/testsvn$ svnadmin create repo_PA6
+purgatory:~/cs253/P6/testsvn$ ls
+repo_PA6
+purgatory:~/cs253/P6/testsvn$ cd .
+purgatory:~/cs253/P6/testsvn$ cd ..
+purgatory:~/cs253/P6$ ls
+callgrind.out.9085  doc2  myOut   PA6	   test1  test3    testsvn
+doc1		    doc3  output  PA6.tar  test2  testMap  valid_exceptions.txt
+purgatory:~/cs253/P6$ pwd
+/s/bach/m/under/lburford/cs253/P6
+purgatory:~/cs253/P6$ ls
+callgrind.out.9085  doc2  myOut   PA6	   test1  test3    testsvn
+doc1		    doc3  output  PA6.tar  test2  testMap  valid_exceptions.txt
+purgatory:~/cs253/P6$ ls
+callgrind.out.9085  doc2  myOut   PA6	   test1  test3    testsvn
+doc1		    doc3  output  PA6.tar  test2  testMap  valid_exceptions.txt
+purgatory:~/cs253/P6$ svn import ./PA6 file:///s/bach/m/under/lburford/cs253/P6/testsvn/repo_PA6/ -m "initial import"
+Adding         PA6/Makefile
+Adding  (bin)  PA6/PA6_TestCase.tar
+Adding         PA6/Stem.cpp
+Adding         PA6/Stem.h
+Adding         PA6/StemExcep.cpp
+Adding         PA6/StemExcep.h
+Adding         PA6/Test_Cases
+Adding         PA6/Test_Cases/README.txt
+Adding         PA6/Test_Cases/invalid1
+Adding         PA6/Test_Cases/invalid1/Exceptions.txt
+Adding         PA6/Test_Cases/invalid1/altona
+Adding         PA6/Test_Cases/invalid1/gastropod
+Adding         PA6/Test_Cases/invalid1/names
+Adding         PA6/Test_Cases/invalid1/random1
+Adding         PA6/Test_Cases/invalid1/random2
+Adding         PA6/Test_Cases/invalid1/rock
+Adding         PA6/Test_Cases/invalid1/seashell
+Adding         PA6/Test_Cases/invalid1/unique
+Adding         PA6/Test_Cases/invalid2
+Adding         PA6/Test_Cases/invalid2/Exceptions.txt
+Adding         PA6/Test_Cases/invalid2/altona
+Adding         PA6/Test_Cases/invalid2/beach
+Adding         PA6/Test_Cases/invalid2/gastropod
+Adding         PA6/Test_Cases/invalid2/names
+Adding         PA6/Test_Cases/invalid2/random1
+Adding         PA6/Test_Cases/invalid2/random2
+Adding         PA6/Test_Cases/invalid2/rock
+Adding         PA6/Test_Cases/invalid2/seashell
+Adding         PA6/Test_Cases/invalid2/unique
+Adding         PA6/Test_Cases/invalid3
+Adding         PA6/Test_Cases/invalid3/Exceptions.txt
+Adding         PA6/Test_Cases/invalid3/altona
+Adding         PA6/Test_Cases/invalid3/beach
+Adding         PA6/Test_Cases/invalid3/gastropod
+Adding         PA6/Test_Cases/invalid3/names
+Adding         PA6/Test_Cases/invalid3/random1
+Adding         PA6/Test_Cases/invalid3/random2
+Adding         PA6/Test_Cases/invalid3/rock
+Adding         PA6/Test_Cases/invalid3/seashell
+Adding         PA6/Test_Cases/invalid3/unique
+Adding         PA6/Test_Cases/out
+Adding         PA6/Test_Cases/out/altona-out
+Adding         PA6/Test_Cases/out/beach-out
+Adding         PA6/Test_Cases/out/gastropod-out
+Adding         PA6/Test_Cases/out/names-out
+Adding         PA6/Test_Cases/out/random1-out
+Adding         PA6/Test_Cases/out/random2-out
+Adding         PA6/Test_Cases/out/rock-out
+Adding         PA6/Test_Cases/out/seashell-out
+Adding         PA6/Test_Cases/out/unique-out
+Adding         PA6/Test_Cases/out/valid1
+Adding         PA6/Test_Cases/valid1
+Adding         PA6/Test_Cases/valid1/Exceptions.txt
+Adding         PA6/Test_Cases/valid1/altona
+Adding         PA6/Test_Cases/valid1/beach
+Adding         PA6/Test_Cases/valid1/gastropod
+Adding         PA6/Test_Cases/valid1/names
+Adding         PA6/Test_Cases/valid1/random1
+Adding         PA6/Test_Cases/valid1/random2
+Adding         PA6/Test_Cases/valid1/rock
+Adding         PA6/Test_Cases/valid1/seashell
+Adding         PA6/Test_Cases/valid1/unique
+Adding         PA6/fDriver.cpp
+Adding         PA6/fDriver.h
+Adding         PA6/lexo.cpp
+Adding         PA6/lexo.h
+Adding         PA6/main.cpp
+Committing transaction...
+Committed revision 1.
+purgatory:~/cs253/P6$ cd testsvn/
+purgatory:~/cs253/P6/testsvn$ ls
+repo_PA6
+purgatory:~/cs253/P6/testsvn$ svn checkout -r file:///s/bach/m/under/lburford/cs253/P6/testsvn/repo_PA6/
+conf/       db/         format      hooks/      locks/      README.txt
+purgatory:~/cs253/P6/testsvn$ svn checkout -r file:///s/bach/m/under/lburford/cs253/P6/testsvn/repo_PA6/db/
+current               rep-cache.db          txn-current
+format                rep-cache.db-journal  txn-current-lock
+fsfs.conf             revprops/             txn-protorevs/
+fs-type               revs/                 uuid
+min-unpacked-rev      transactions/         write-lock
+purgatory:~/cs253/P6/testsvn$ svn checkout -r file:///s/bach/m/under/lburford/cs253/P6/testsvn/repo_PA6/hooks/
+post-commit.tmpl          post-unlock.tmpl          pre-revprop-change.tmpl
+post-lock.tmpl            pre-commit.tmpl           pre-unlock.tmpl
+post-revprop-change.tmpl  pre-lock.tmpl             start-commit.tmpl
+purgatory:~/cs253/P6/testsvn$ svn checkout -r file:///s/bach/m/under/lburford/cs253/P6/testsvn/repo_PA6/hooks/
+post-commit.tmpl          post-unlock.tmpl          pre-revprop-change.tmpl
+post-lock.tmpl            pre-commit.tmpl           pre-unlock.tmpl
+post-revprop-change.tmpl  pre-lock.tmpl             start-commit.tmpl
+purgatory:~/cs253/P6/testsvn$ svn checkout -r file:///s/bach/m/under/lburford/cs253/P6/testsvn/repo_PA6/hooks/
+post-commit.tmpl          post-unlock.tmpl          pre-revprop-change.tmpl
+post-lock.tmpl            pre-commit.tmpl           pre-unlock.tmpl
+post-revprop-change.tmpl  pre-lock.tmpl             start-commit.tmpl
+purgatory:~/cs253/P6/testsvn$ svn checkout -r file:///s/bach/m/under/lburford/cs253/P6/testsvn/repo_PA6/
+conf/       db/         format      hooks/      locks/      README.txt
+purgatory:~/cs253/P6/testsvn$ svn checkout -r file:///s/bach/m/under/lburford/cs253/P6/testsvn/repo_PA6/conf/
+authz           hooks-env.tmpl  passwd          svnserve.conf
+purgatory:~/cs253/P6/testsvn$ svn checkout -r file:///s/bach/m/under/lburford/cs253/P6/testsvn/repo_PA6/svn log
+svn: E205000: Syntax error in revision argument 'file:///s/bach/m/under/lburford/cs253/P6/testsvn/repo_PA6/svn'
+purgatory:~/cs253/P6/testsvn$ svn log
+svn: E155007: '/s/bach/m/under/lburford/cs253/P6/testsvn' is not a working copy
+purgatory:~/cs253/P6/testsvn$ svn import ./PA6 file:///s/bach/m/under/lburford/cs253/P6/testsvn/repo_PA6 -m "initial import"
+svn: E000002: Can't stat '/s/bach/m/under/lburford/cs253/P6/testsvn/PA6': No such file or directory
+purgatory:~/cs253/P6/testsvn$ svn import ./PA6 file:///s/bach/m/under/lburford/cs253/P6/testsvn/repo_PA6/trunk -m "initial import"
+svn: E000002: Can't stat '/s/bach/m/under/lburford/cs253/P6/testsvn/PA6': No such file or directory
+purgatory:~/cs253/P6/testsvn$ svn update
+Skipped '.'
+svn: E155007: None of the targets are working copies
+purgatory:~/cs253/P6/testsvn$ 

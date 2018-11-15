@@ -1,0 +1,524 @@
+powderhorn:~/cs253/Recitation3$ ./main 1
+Creating Node, 1 are in existence right now
+Creating Node, 2 are in existence right now
+Creating Node, 3 are in existence right now
+Creating Node, 4 are in existence right now
+The fully created list is:
+4
+3
+2
+1
+
+Now removing elements:
+Creating Node, 5 are in existence right now
+Destroying Node, 4 are in existence right now
+4
+3
+2
+1
+
+Segmentation fault (core dumped)
+powderhorn:~/cs253/Recitation3$ gdb main
+GNU gdb (GDB) Fedora 7.12.1-48.fc25
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from main...done.
+(gdb) run 1
+Starting program: /s/bach/m/under/lburford/cs253/Recitation3/main 1
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.24-10.fc25.x86_64
+Creating Node, 1 are in existence right now
+Creating Node, 2 are in existence right now
+Creating Node, 3 are in existence right now
+Creating Node, 4 are in existence right now
+The fully created list is:
+4
+3
+2
+1
+
+Now removing elements:
+Creating Node, 5 are in existence right now
+Destroying Node, 4 are in existence right now
+4
+3
+2
+1
+
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000400fe2 in Node<int>::next (this=0x0) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+Missing separate debuginfos, use: dnf debuginfo-install libgcc-6.4.1-1.fc25.x86_64 libstdc++-6.4.1-1.fc25.x86_64
+(gdb) list 1
+1	// main.cc
+2	// Andrew Gilpin
+3	// agg1@cec.wustl.edu
+4	
+5	// This file contains the example program used in the gdb debugging
+6	// tutorial. The tutorial can be found on the web at
+7	// http://students.cec.wustl.edu/~agg1/tutorial/
+8	
+9	#include <iostream>
+10	#include <stdio.h>
+(gdb) run 1
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Starting program: /s/bach/m/under/lburford/cs253/Recitation3/main 1
+Creating Node, 1 are in existence right now
+Creating Node, 2 are in existence right now
+Creating Node, 3 are in existence right now
+Creating Node, 4 are in existence right now
+The fully created list is:
+4
+3
+2
+1
+
+Now removing elements:
+Creating Node, 5 are in existence right now
+Destroying Node, 4 are in existence right now
+4
+3
+2
+1
+
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000400fe2 in Node<int>::next (this=0x0) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+(gdb) where
+#0  0x0000000000400fe2 in Node<int>::next (this=0x0) at main.cpp:31
+#1  0x0000000000400ef7 in LinkedList<int>::remove (this=0x614c20, 
+    item_to_remove=@0x7fffffffe21c: 1) at main.cpp:80
+#2  0x0000000000400b98 in main (argc=2, argv=0x7fffffffe328) at main.cpp:127
+(gdb) start 1
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Temporary breakpoint 1 at 0x400a86: file main.cpp, line 108.
+Starting program: /s/bach/m/under/lburford/cs253/Recitation3/main 1
+
+Temporary breakpoint 1, main (argc=2, argv=0x7fffffffe328) at main.cpp:108
+108	  if(argc != 2 || strcmp(argv[1], "1") != 0)
+(gdb) step
+112	  LinkedList<int> *list = new LinkedList<int> ();
+(gdb) 
+LinkedList<int>::LinkedList (this=0x614c20) at main.cpp:45
+45	  LinkedList () : head_(0) {};
+(gdb) 
+main (argc=2, argv=0x7fffffffe328) at main.cpp:114
+114	  for(int val = 1; val != 5; ++val)
+(gdb) 
+116	    list->insert (val);
+(gdb) print val
+$1 = 1
+(gdb) 
+$2 = 1
+(gdb) step
+LinkedList<int>::insert (this=0x614c20, new_item=@0x7fffffffe214: 1) at main.cpp:50
+50	    return ((head_ = new Node<T>(new_item, head_)) != 0) ? 0 : -1;
+(gdb) 
+Node<int>::Node (this=0x614c40, value=@0x7fffffffe214: 1, next=0x0) at main.cpp:19
+19	  Node (const T &value, Node<T> *next = 0) : value_(value), next_(next) {
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+Creating Node, 1 are in existence right now
+23	  }
+(gdb) 
+LinkedList<int>::insert (this=0x614c20, new_item=@0x7fffffffe214: 1) at main.cpp:51
+51	  }
+(gdb) 
+main (argc=2, argv=0x7fffffffe328) at main.cpp:114
+114	  for(int val = 1; val != 5; ++val)
+(gdb) 
+116	    list->insert (val);
+(gdb) print val
+$3 = 2
+(gdb) step
+LinkedList<int>::insert (this=0x614c20, new_item=@0x7fffffffe214: 2) at main.cpp:50
+50	    return ((head_ = new Node<T>(new_item, head_)) != 0) ? 0 : -1;
+(gdb) 
+Node<int>::Node (this=0x615070, value=@0x7fffffffe214: 2, next=0x614c40)
+    at main.cpp:19
+19	  Node (const T &value, Node<T> *next = 0) : value_(value), next_(next) {
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+Creating Node, 2 are in existence right now
+23	  }
+(gdb) 
+LinkedList<int>::insert (this=0x614c20, new_item=@0x7fffffffe214: 2) at main.cpp:51
+51	  }
+(gdb) 
+main (argc=2, argv=0x7fffffffe328) at main.cpp:114
+114	  for(int val = 1; val != 5; ++val)
+(gdb) 
+116	    list->insert (val);
+(gdb) print val
+$4 = 3
+(gdb) 
+$5 = 3
+(gdb) step
+LinkedList<int>::insert (this=0x614c20, new_item=@0x7fffffffe214: 3) at main.cpp:50
+50	    return ((head_ = new Node<T>(new_item, head_)) != 0) ? 0 : -1;
+(gdb) print val
+No symbol "val" in current context.
+(gdb) 
+No symbol "val" in current context.
+(gdb) step
+Node<int>::Node (this=0x615090, value=@0x7fffffffe214: 3, next=0x615070)
+    at main.cpp:19
+19	  Node (const T &value, Node<T> *next = 0) : value_(value), next_(next) {
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+Creating Node, 3 are in existence right now
+23	  }
+(gdb) 
+LinkedList<int>::insert (this=0x614c20, new_item=@0x7fffffffe214: 3) at main.cpp:51
+51	  }
+(gdb) 
+main (argc=2, argv=0x7fffffffe328) at main.cpp:114
+114	  for(int val = 1; val != 5; ++val)
+(gdb) 
+116	    list->insert (val);
+(gdb) print val
+$6 = 4
+(gdb) step
+LinkedList<int>::insert (this=0x614c20, new_item=@0x7fffffffe214: 4) at main.cpp:50
+50	    return ((head_ = new Node<T>(new_item, head_)) != 0) ? 0 : -1;
+(gdb) 
+Node<int>::Node (this=0x6150b0, value=@0x7fffffffe214: 4, next=0x615090)
+    at main.cpp:19
+19	  Node (const T &value, Node<T> *next = 0) : value_(value), next_(next) {
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+Creating Node, 4 are in existence right now
+23	  }
+(gdb) 
+LinkedList<int>::insert (this=0x614c20, new_item=@0x7fffffffe214: 4) at main.cpp:51
+51	  }
+(gdb) 
+main (argc=2, argv=0x7fffffffe328) at main.cpp:114
+114	  for(int val = 1; val != 5; ++val)
+(gdb) 
+119	  cout << "The fully created list is:" << endl;
+(gdb) 
+The fully created list is:
+120	  list->print ();
+(gdb) 
+LinkedList<int>::print (this=0x614c20) at main.cpp:87
+87	    Node<T> *marker = head_;
+(gdb) 
+88	    while (marker != 0) {
+(gdb) 
+89	      cout << marker->value() << endl;
+(gdb) 
+Node<int>::value (this=0x6150b0) at main.cpp:33
+33	  const T& value () const { return value_; }
+(gdb) 
+4
+LinkedList<int>::print (this=0x614c20) at main.cpp:90
+90	      marker = marker->next();
+(gdb) 
+Node<int>::next (this=0x6150b0) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+(gdb) 
+LinkedList<int>::print (this=0x614c20) at main.cpp:88
+88	    while (marker != 0) {
+(gdb) 
+89	      cout << marker->value() << endl;
+(gdb) 
+Node<int>::value (this=0x615090) at main.cpp:33
+33	  const T& value () const { return value_; }
+(gdb) 
+3
+LinkedList<int>::print (this=0x614c20) at main.cpp:90
+90	      marker = marker->next();
+(gdb) 
+Node<int>::next (this=0x615090) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+(gdb) 
+LinkedList<int>::print (this=0x614c20) at main.cpp:88
+88	    while (marker != 0) {
+(gdb) 
+89	      cout << marker->value() << endl;
+(gdb) 
+Node<int>::value (this=0x615070) at main.cpp:33
+33	  const T& value () const { return value_; }
+(gdb) 
+2
+LinkedList<int>::print (this=0x614c20) at main.cpp:90
+90	      marker = marker->next();
+(gdb) 
+Node<int>::next (this=0x615070) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+(gdb) 
+LinkedList<int>::print (this=0x614c20) at main.cpp:88
+88	    while (marker != 0) {
+(gdb) 
+89	      cout << marker->value() << endl;
+(gdb) 
+Node<int>::value (this=0x614c40) at main.cpp:33
+33	  const T& value () const { return value_; }
+(gdb) 
+1
+LinkedList<int>::print (this=0x614c20) at main.cpp:90
+90	      marker = marker->next();
+(gdb) 
+Node<int>::next (this=0x614c40) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+(gdb) 
+LinkedList<int>::print (this=0x614c20) at main.cpp:88
+88	    while (marker != 0) {
+(gdb) 
+92	  }
+(gdb) 
+main (argc=2, argv=0x7fffffffe328) at main.cpp:122
+122	  cout << endl << "Now removing elements:" << endl;
+(gdb) 
+
+Now removing elements:
+123	  list->remove (4);
+(gdb) 
+LinkedList<int>::remove (this=0x614c20, item_to_remove=@0x7fffffffe218: 4)
+    at main.cpp:55
+55	    Node<T> *marker = head_;
+(gdb) 
+56	    Node<T> *temp = 0;  // temp points to one behind as we iterate
+(gdb) 
+58	    while (marker != 0) {
+(gdb) 
+59	      if (marker->value() == item_to_remove) {
+(gdb) 
+Node<int>::value (this=0x6150b0) at main.cpp:33
+33	  const T& value () const { return value_; }
+(gdb) 
+LinkedList<int>::remove (this=0x614c20, item_to_remove=@0x7fffffffe218: 4)
+    at main.cpp:60
+60	        if (temp == 0) { // marker is the first element in the list
+(gdb) 
+61	          if (marker->next() == 0) {
+(gdb) 
+Node<int>::next (this=0x6150b0) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+(gdb) 
+LinkedList<int>::remove (this=0x614c20, item_to_remove=@0x7fffffffe218: 4)
+    at main.cpp:66
+66	            head_ = new Node<T>(marker->value(), marker->next());
+(gdb) 
+Node<int>::value (this=0x6150b0) at main.cpp:33
+33	  const T& value () const { return value_; }
+(gdb) 
+Node<int>::next (this=0x6150b0) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+(gdb) 
+Node<int>::Node (this=0x6150d0, value=@0x6150b0: 4, next=0x615090) at main.cpp:19
+19	  Node (const T &value, Node<T> *next = 0) : value_(value), next_(next) {
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+22	         << " are in existence right now" << endl;
+(gdb) 
+20	    cout << "Creating Node, "
+(gdb) 
+Creating Node, 5 are in existence right now
+23	  }
+(gdb) 
+LinkedList<int>::remove (this=0x614c20, item_to_remove=@0x7fffffffe218: 4)
+    at main.cpp:67
+67	            delete marker;
+(gdb) 
+Node<int>::~Node (this=0x6150b0, __in_chrg=<optimized out>) at main.cpp:27
+27	         << " are in existence right now" << endl;
+(gdb) 
+25	    cout << "Destroying Node, "
+(gdb) 
+27	         << " are in existence right now" << endl;
+(gdb) 
+25	    cout << "Destroying Node, "
+(gdb) 
+27	         << " are in existence right now" << endl;
+(gdb) 
+25	    cout << "Destroying Node, "
+(gdb) 
+Destroying Node, 4 are in existence right now
+28	    next_ = 0;
+(gdb) 
+29	  }
+(gdb) 
+LinkedList<int>::remove (this=0x614c20, item_to_remove=@0x7fffffffe218: 4)
+    at main.cpp:68
+68	            marker = 0;
+(gdb) 
+70	          return 0;
+(gdb) 
+84	  }
+(gdb) 
+main (argc=2, argv=0x7fffffffe328) at main.cpp:124
+124	  list->print ();
+(gdb) 
+LinkedList<int>::print (this=0x614c20) at main.cpp:87
+87	    Node<T> *marker = head_;
+(gdb) 
+88	    while (marker != 0) {
+(gdb) 
+89	      cout << marker->value() << endl;
+(gdb) 
+Node<int>::value (this=0x6150d0) at main.cpp:33
+33	  const T& value () const { return value_; }
+(gdb) 
+4
+LinkedList<int>::print (this=0x614c20) at main.cpp:90
+90	      marker = marker->next();
+(gdb) 
+Node<int>::next (this=0x6150d0) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+(gdb) 
+LinkedList<int>::print (this=0x614c20) at main.cpp:88
+88	    while (marker != 0) {
+(gdb) 
+89	      cout << marker->value() << endl;
+(gdb) 
+Node<int>::value (this=0x615090) at main.cpp:33
+33	  const T& value () const { return value_; }
+(gdb) 
+3
+LinkedList<int>::print (this=0x614c20) at main.cpp:90
+90	      marker = marker->next();
+(gdb) 
+Node<int>::next (this=0x615090) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+(gdb) 
+LinkedList<int>::print (this=0x614c20) at main.cpp:88
+88	    while (marker != 0) {
+(gdb) 
+89	      cout << marker->value() << endl;
+(gdb) 
+Node<int>::value (this=0x615070) at main.cpp:33
+33	  const T& value () const { return value_; }
+(gdb) 
+2
+LinkedList<int>::print (this=0x614c20) at main.cpp:90
+90	      marker = marker->next();
+(gdb) 
+Node<int>::next (this=0x615070) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+(gdb) 
+LinkedList<int>::print (this=0x614c20) at main.cpp:88
+88	    while (marker != 0) {
+(gdb) 
+89	      cout << marker->value() << endl;
+(gdb) 
+Node<int>::value (this=0x614c40) at main.cpp:33
+33	  const T& value () const { return value_; }
+(gdb) 
+1
+LinkedList<int>::print (this=0x614c20) at main.cpp:90
+90	      marker = marker->next();
+(gdb) 
+Node<int>::next (this=0x614c40) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+(gdb) 
+LinkedList<int>::print (this=0x614c20) at main.cpp:88
+88	    while (marker != 0) {
+(gdb) 
+92	  }
+(gdb) 
+main (argc=2, argv=0x7fffffffe328) at main.cpp:125
+125	  cout << endl;
+(gdb) 
+
+127	  list->remove (1);
+(gdb) 
+LinkedList<int>::remove (this=0x614c20, item_to_remove=@0x7fffffffe21c: 1)
+    at main.cpp:55
+55	    Node<T> *marker = head_;
+(gdb) 
+56	    Node<T> *temp = 0;  // temp points to one behind as we iterate
+(gdb) 
+58	    while (marker != 0) {
+(gdb) 
+59	      if (marker->value() == item_to_remove) {
+(gdb) 
+Node<int>::value (this=0x6150d0) at main.cpp:33
+33	  const T& value () const { return value_; }
+(gdb) 
+LinkedList<int>::remove (this=0x614c20, item_to_remove=@0x7fffffffe21c: 1)
+    at main.cpp:78
+78	      marker = 0;  // reset the marker
+(gdb) 
+79	      temp = marker;
+(gdb) 
+80	      marker = marker->next();
+(gdb) 
+Node<int>::next (this=0x0) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+(gdb) 
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000400fe2 in Node<int>::next (this=0x0) at main.cpp:31
+31	  Node<T>* next () const { return next_; }
+(gdb) 
+
+Program terminated with signal SIGSEGV, Segmentation fault.
+The program no longer exists.
+(gdb) 

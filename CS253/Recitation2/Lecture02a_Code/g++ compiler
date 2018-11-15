@@ -1,0 +1,13 @@
+powderhorn:~/cs253/Recitation2/Lecture02a_Code$ g++ main.cpp Complex.cpp -o demo
+main.cpp:2:21: fatal error: Complex.h: No such file or directory
+ #include <Complex.h>
+                     ^
+compilation terminated.
+Complex.cpp:1:21: fatal error: Complex.h: No such file or directory
+ #include <Complex.h>
+                     ^
+compilation terminated.
+powderhorn:~/cs253/Recitation2/Lecture02a_Code$ g++ main.cpp Complex.cpp -I. -o demo
+powderhorn:~/cs253/Recitation2/Lecture02a_Code$ ls
+Complex.cpp  Complex.h	demo  main.cpp	test.txt
+powderhorn:~/cs253/Recitation2/Lecture02a_Code$
