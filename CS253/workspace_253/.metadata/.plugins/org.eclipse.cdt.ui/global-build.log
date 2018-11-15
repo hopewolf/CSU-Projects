@@ -1,3 +1,0 @@
-16:31:26 **** Incremental Build of configuration Default for project PA6 ****
-make all 
-g++ main.o fDriver.o lexo.o StemExcep.o Stem.o -Wall -g -I. -o PA6
