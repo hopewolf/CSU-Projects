@@ -1,0 +1,21 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	ValLess           304D
+//	MultElement       3038
+//	Result            3003
+//	WholeNum          303F
+//	BaseCase          305C
+//	ValEqual          304A
+//	Main              3004
+//	Needle            3002
+//	DivideBy2         303A
+//	Finish            3014
+//	Recurse           3055
+//	Stack             3001
+//	Haystack          3016
+//	BinarySearch      302A
+//	ValGreat          3051
+//	Count             3015
+//	End               305D
